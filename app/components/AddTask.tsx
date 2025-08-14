@@ -24,7 +24,7 @@ const AddTask = () => {
     await addToDo({
       id: uuidv4(),
       text: newTaskValue,
-      status: "Not Yet",
+      status: newTaskStatus,
     });
 
     setNewTaskValue("");
@@ -51,7 +51,7 @@ const AddTask = () => {
           <h3 className="font-bold text-lg flex justify-start">
             Add a New Task
           </h3>
-          <div className="modal-action flex gap-2 justify-center">
+          <div className="modal-action flex flex-col gap-2 justify-center">
             <label className="input input-primary">
               <LuFilePlus className="font-bold" />
               <input
@@ -62,6 +62,20 @@ const AddTask = () => {
                 placeholder="What is your task?"
               />
             </label>
+            <select
+              value={newTaskStatus}
+              onChange={(e) =>
+                setNewTaskStatus(e.target.value as "Not Yet" | "On Going" | "Done")
+              }
+              className="select select-primary w-full"
+            >
+              <option disabled value="Status">
+                Status
+              </option>
+              <option value="Not Yet">Not Yet</option>
+              <option value="On Going">On Going</option>
+              <option value="Done">Done</option>
+            </select>
             <button type="submit" className="btn btn-primary">
               <FiPlusCircle className="font-bold text-xl" />
             </button>
