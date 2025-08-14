@@ -13,6 +13,9 @@ const AddTask = () => {
   const router = useRouter();
   const [modalOpen, setModalOpen] = useState(false);
   const [newTaskValue, setNewTaskValue] = useState("");
+  const [newTaskStatus, setNewTaskStatus] = useState<
+    "Not Yet" | "On Going" | "Done"
+  >("Not Yet");
   const { showAlert } = useAlert();
 
   const handleNewSubmitToDo: FormEventHandler<HTMLFormElement> = async (e) => {
@@ -21,9 +24,11 @@ const AddTask = () => {
     await addToDo({
       id: uuidv4(),
       text: newTaskValue,
+      status: newTaskStatus,
     });
 
     setNewTaskValue("");
+    setNewTaskStatus("Not Yet");
     setModalOpen(false);
 
     // Trigger alert global
@@ -47,7 +52,7 @@ const AddTask = () => {
           <h3 className="font-bold text-lg flex justify-start">
             Add a New Task
           </h3>
-          <div className="modal-action flex justify-center">
+          <div className="modal-action flex gap-2 justify-center">
             <label className="input input-primary">
               <LuFilePlus className="font-bold" />
               <input

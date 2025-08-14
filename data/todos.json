@@ -8,7 +8,7 @@
     {
       "id": "38284fef-45a5-426a-abf3-5fb0dd330506",
       "text": "Set",
-      "status": "Not Yet"
+      "status": "Done"
     },
     {
       "id": "4d22f36b-9e55-4e9f-9f84-e9e9feb31fb1",
@@ -19,6 +19,26 @@
       "id": "732ebc13-4559-453c-bcc4-3b743d69938a",
       "text": "Test Status",
       "status": "Done"
+    },
+    {
+      "id": "85b37148-4248-45f1-82c9-3e32db4dd3bc",
+      "text": "test",
+      "status": "On Going"
+    },
+    {
+      "id": "3d901533-b23f-4c72-a599-fa882271b8f4",
+      "text": "Test",
+      "status": "On Going"
+    },
+    {
+      "id": "385fae03-92ca-4a01-bb6f-4ae9b7ae5354",
+      "text": "Test",
+      "status": "Not Yet"
+    },
+    {
+      "id": "47cbec35-d685-4416-9d92-f6b36ca09594",
+      "text": "Test Dropdown",
+      "status": "Not Yet"
     }
   ]
 }
