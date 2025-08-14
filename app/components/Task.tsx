@@ -24,9 +24,7 @@ const Task: React.FC<TaskProps> = ({ task }) => {
   const [modalOpenDelete, setModalOpenDelete] = useState<boolean>(false);
   const [taskToDoEdit, setTaskToDoEdit] = useState<string>(task.text);
 
-  const [selectedStatus, setSelectedStatus] = useState<string>(
-    task.status || "Status"
-  );
+  const [selectedStatus, setSelectedStatus] = useState<"Not Yet" | "On Going" | "Done">(task.status);
 
   const statusColors: Record<string, string> = {
     "Not Yet": "btn-error",
