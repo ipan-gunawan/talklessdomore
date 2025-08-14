@@ -24,14 +24,13 @@ const AddTask = () => {
     await addToDo({
       id: uuidv4(),
       text: newTaskValue,
-      status: newTaskStatus,
+      status: "Not Yet",
     });
 
     setNewTaskValue("");
     setNewTaskStatus("Not Yet");
     setModalOpen(false);
 
-    // Trigger alert global
     showAlert("Successfully added new task", "success");
 
     router.refresh();
